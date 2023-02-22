@@ -4,6 +4,20 @@ body{
     background-color: #fbffff;
     max-width: 100%;
 }
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    cursor: pointer;
+}
+
+.table { display:table; }
+.table-row { display:table-row; }
+.table-cell { display:table-cell; }
+
+
+
 .bread-crumb{
     background-color: #60a3bc ;
     display: flex;
@@ -21,6 +35,10 @@ body{
 
 .bread-crumb a{
     color: #fbffff;
+    margin: 5px;
+}
+.bread-crumb a:hover{
+    color: #ee8e21;
 }
 
 .bread-crumb>div.icons span{
@@ -56,6 +74,48 @@ nav.navbar{
     border-radius: 50%;
 }
 
+
+
+.menu-toggle{
+    display: none;
+}
+.menu-toggle span{
+    font-size: 20px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
 .side-menu .nav .nav-link{
     color: #60a3bc;
 }
@@ -99,9 +159,19 @@ nav.navbar{
 .main-content{
     margin: 2%;
 }
+.main-content .path a{
+    font-weight: 600;
+    color: #ee8e21;
+    text-decoration: none;
+}
+.main-content .path a:hover{
+    color: #60a3bc;
+}
 .main-content .path span{
     font-weight: 600;
     color: #60a3bc;
+    font-size: 14px;
+    
 }
 
 .feeds .mytitle{
@@ -167,11 +237,50 @@ footer>div{
 
 
 @media (max-width: 767px) {
+
+    .bread-crumb>div a i{
+        font-size: 23px;
+    }
+    .menu-toggle{
+        display: block;
+    }
+
     .sect1,.sect2{
         display: none;
     }
     .sect3{
         width: 100%;
     }
+
+    .mobile-none{
+        display: none;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        border-right: 1px solid #aaa;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+      .sidenav .nav-link{
+        font-size: 14px;
+        color: #60a3bc;
+      }
+      
+      
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
 
 }

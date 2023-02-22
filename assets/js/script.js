@@ -15,3 +15,18 @@ items.forEach((el) => {
         next = next.nextElementSibling
     }
 })
+
+
+function changeImage(element) {
+    var main_prodcut_image = document.getElementById('main_product_image');
+    main_prodcut_image.src = element.src;   
+
+}
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
