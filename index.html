@@ -31,11 +31,11 @@
 <body>
     <header>
         <div class="bread-crumb">
-            <div class="me-2">
-                <p>help Centers</p>
+            <div class="me-2 mt-1">
+                <p class="mobile-none">help Centers</p>
             </div>
-            <a href=""><i class="fa fa-whatsapp me-1"></i>0771210855</a>
-            <a href=""><i class="fa fa-phone me-1"></i>+25702678768</a>
+                <a href=""><i class="fa fa-whatsapp me-1"></i><span class="mobile-none">0771210855</span></a>
+                <a href=""><i class="fa fa-phone me-1"></i><span class="mobile-none">+25702678768</span></a>
             <div class="ms-auto icons">
                 <span><a class="fa fa-facebook"></a></span>
                 <span><a class="fa fa-linkedin"></a></span>
@@ -44,9 +44,11 @@
         </div>
         <nav class="navbar">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <img src="logos/svg/logo-no-background.svg" alt="logo" />
                 </a>
+
+                <!-- <a><i class="fa fa-bell" aria-hidden="true"></i></a> -->
                 <div class="avator">
                     <div class="dropdown">
                         <a href="#" class="dropdown-toggl" data-bs-toggle="dropdown">
@@ -59,16 +61,46 @@
                             <a href="#" class="dropdown-item">My profile </a>
                             <a href="#" class="dropdown-item">Notifications</a>
                             <hr>
-                            <a href="#" class="dropdown-item">logout</a>
+                            <a href="login.html" class="dropdown-item">logout</a>
 
                         </div>
                     </div>
                 </div>
+                <button class="btn menu-toggle" id="menu-toggle">
+                    <span onclick="openNav()">&#9776;</span>
+                </button>
             </div>
         </nav>
     </header>
     <div class="content-body">
+        <!-- Menu for mobile -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="side-menu">
+                <div class="nav d-block py-3">
+                    <a href="#" class="nav-link text-truncate font-weight-bold" >DashBoard</a>
+                    <a href="#menu1" class="nav-link collapsed text-truncate font-weight-bold" data-bs-toggle="collapse" data-bs-parent="#sidebar">Hostels</a>
+                    <div class="collapse ps-2" id="menu1" data-bs-parent="#sidebar">
+                        <a href="AddHostel.html" class="nav-link " data-bs-parent="#menu1sub1" >Add hostel</a>
+                        <a href="#" class="nav-link " data-bs-parent="#menu1sub1" >my hostels</a>
+                    </div>
+                    <a href="#menu2" class="nav-link collapsed text-truncate font-weight-bold " data-bs-toggle="collapse" data-bs-parent="#sidebar">Feeds</a>
+                    <div class="collapse ps-2" id="menu2" data-bs-parent="#sidebar">
+                        <a href="#" class="nav-link " data-bs-parent="#menu2sub1" >My feeds</a>
+                        <a href="#" class="nav-link " data-bs-parent="#menu2sub1" >All feeds</a>
+                    </div>
+                    <a href="#menu3" class="nav-link collapsed text-truncate font-weight-bold " data-bs-toggle="collapse" data-bs-parent="#sidebar">My Profile</a>
+                    <div class="collapse ps-2" id="menu3" data-bs-parent="#sidebar">
+                        <a href="#" class="nav-link " data-bs-parent="#menu2sub1" >View Profile</a>
+                        <a href="#" class="nav-link " data-bs-parent="#menu2sub1" >Edit Profile</a>
+                    </div>
+                    
+                </div>
+            </div>
+          </div>
+          <!-- End of mobile menu -->
         <section class="sect1">
+            
             <div class="side-menu">
                 <div>
                     <div class="nav d-block py-3">
@@ -98,22 +130,24 @@
         <section class="sect3">
             <div class="main-content">
                 <div class="path my-2 ms-3">
-                    <a href=""></a><span>home</span>
+                    <a href="index.html"></a><span>home</span>
                 </div>
                 <div class="content">
                     <div class="hostels">
-                        <div class="row row-cols-4 ">
-                            <div class="col">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-4">
                                 <div class="card">
-                                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
-                                        class="card-img-top" alt="Hollywood Sign on The Hill" />
+                                    <a href="hostelhome.html">
+                                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
+                                        class="card-img-top" alt="H" />
+                                    </a>
                                     <div class="card-body">
-                                        <h5 class="card-title">Helican</h5>
+                                        <a href="hosteldetails.html"><h5 class="card-title">Helican</h5></a>
                                         <p>kikumikikumi makerere</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col">
+                            <div class="col-md-3 col-sm-4">
                                 <div class="card">
                                     <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
                                         class="card-img-top" alt="Hollywood Sign on The Hill" />
@@ -200,6 +234,7 @@
 
     </div>
     <!-- End of .container -->
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
